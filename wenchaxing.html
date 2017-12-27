@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh-Hans-CN">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="Author" content="">
+        <meta name="Keywords" content="问卷调查,问查星">
+        <meta name="Description" content="">
+        <title>问查星</title>
+        <style type="text/css">
+            *{margin: 0;padding: 0;}
+            body{background: #fff;}
+            ul,ol{list-style: none;}
+            a{text-decoration: none;color:#333;}
+            .btn_blue{background-color: #1ea0fa;}
+            .btn_orange{background-color: #ff941a;}
+
+            img{vertical-align: middle;border: 0;max-width: 100%;}
+            .wcxhome_head{height:68px;width: 100%;z-index:9999;background-color: #fff;border-bottom: 1px solid #e1e4e5;}
+            .inner{margin:0 auto;width: 1200px;line-height: 66px;}
+            .fl{float: left;}
+            .fr{float: right;}
+            .btn,.btnnew{display: inline-block;padding: 0 10px;margin-bottom:0;font-size: 12px;font-weight: normal;line-height: 1;text-align: center;white-space: nowrap;vertical-align: middle;cursor:pointer;}
+
+            .clearfixed::after{content:'';display:block;clear:both;}
+            .wcxhome_menu li{float: left;position: relative;}
+            .wcxhome_menu a{font-size: 16px;color:#333;padding:0 16px;display: block;}
+
+            .wcxhome_btn{margin:19px 0 0 15px;h}
+            .wcxhome_btn li{float: left;margin-left: 10px;}
+            .wcxhome_btn a{font-size: 16px;color:#ff941a;border: 1px solid #ff941a;display: block;width: 68px;line-height: 28px;text-align: center;border-radius:6px;}
+            .first_survey{border-bottom: 2px solid #ff941a;}
+            .first_survey span{color:#ff941a;}
+            .survey span{color:#ff941a;}
+            .wcxhome_menu li a:hover{color:#ff941a;}
+            .wcxhome_menu li:hover .subnav{display:block;}
+
+            .subnav{position: absolute;top:58px;z-index:99;border: 1px solid #555;width: 608px;display: flex;box-shadow:0px 6px 12px rgba(0,0,0,0.16);border: 1px solid #e1e4e5;border-radius:6px;display:none;}
+            .subnav li{width: 20%;background: #fff;}
+            .subnav a{padding:9px 0;line-height: normal;margin:14px 0;border-right: 1px sollid #e5e5e5;text-align: center;font-size: 12px;color:#808080;border-right: 1px solid #e5e5e5;}
+            .subnav li a span{vertical-align: middle;display: block;margin-top: 12px;}
+            .subnav li{}
+            .navitem{position: relative;top:0;left:0;}
+            .navitem:hover .subnav{display:block;}
+
+        </style>
+    </head>
+    <body>
+        <div class="wcxhome_head" style="position:fixed;">
+            <div class="inner clearfixed">
+                <a href="javascript:void(0)" class="left fl"><img src="img/logonew.png" width="130" height="48" style="vertical-align: middle;"></a>
+                <div class="fr wcxhome_nav right clearfixed">
+                    <ul class="wcxhome_menu fl">
+                        <li><a href="javascript:void(0)" class="first_survey"><span>首页</span><span class="line"></span></a></li>
+                        <li class="navitem"><a href="javascript:void(0)"><span>应用展示</span><span class="line"></span> </a>
+                        <ul class="subnav">
+                            <li><a href="javascript:void(0)"><img src="img/survey_orange.png" alt=""><span>问卷调查</span></a></li>
+                            <li><a href="javascript:void(0)"><img src="img/360_orange.png" alt=""><span>360度评估</span></a></li>
+                            <li><a href="javascript:void(0)"><img src="img/form_orange.png" alt=""><span>报名表单</span></a></li>
+                            <li><a href="javascript:void(0)"><img src="img/evaluation_orange.png" alt=""><span>在线测评</span></a></li>
+                            <li><a href="javascript:void(0)"><img src="img/vote_orange.png" alt=""><span>在线投票</span></a></li>
+                        </ul>
+                        </li>
+                        <li><a href="javascript:void(0)"><span>企业版服务</span><span class="line"></span></a></li>
+                        <li><a href="javascript:void(0)"><span>样本服务</span><span class="line"></span></a></li>
+                        <li><a href="javascript:void(0)"><span>问卷调查模板</span><span class="line"></span></a></li>
+                    </ul>
+                    <ul class="wcxhome_btn fr">
+                        <li id="Register"><a href="javascript:void(0)" id="login" class="transition">登录</a></li>
+                        <li><a href="javascript:void(0)">注册</a></li>
+                    </ul>
+                </div>
+            </div>
+         </div>
+
+            <style type="text/css">
+                .container{background: url(img/banner.jpg) no-repeat center;text-align: center;
+                background-size: cover;position: relative;}
+
+                .container .btn_free{font-size: 22px;padding:0 46px;line-height: 50px;border-radius: 25px;border: none;background: #ff941a;color:#fff;}
+                .wcxhome_banner--star{position: absolute;top: -52px;right: -43px;width: 140px;height: 140px;background: url(img/light.png) no-repeat;}
+
+                .container_word {color:white;position: absolute;left:calc(50% - 170px);top:100px;}
+                .container_word h1{position: relative;z-index:3;font-size: 54px;color:#dbdbdb;margin-bottom: 20px;}
+                .container_word .h2{font-size: 22px;color:#fff;margin:20px 0 40px 0;}
+                .container_word .emphasize{color:#ff9300;font-weight: bold;font-size: 20px;margin-right: 15px;}
+
+                 .wcxhome_new{position: absolute;bottom:0;right:0;height: 80px;left:0;background-color: rgba(0,26,51,.6);color:#fff;}
+                 .wcxhome_new .inner{width: 946px;margin:0 auto;line-height: 80px;}
+                 .wcxhome_new p{font-size: 16px;color:#dbdbdb;line-height: 80px;padding:0 40px;}
+                 .wcxhome_new .btn{line-height: 32px;padding:0 24px;border: 1px solid #ff941a;border-radius:17px;font-size: 16px;color:#ff941a;margin-top:23px;}
+            </style>
+            <div class="container" style="height:719px">
+                <div class="container_word"><h1>不止于问卷调查</h1>
+                    <div class="h2"><em class="counter emphasize">1,968</em>万用户已在问查星上回收 <em class="counter emphasize">12.4</em>亿份答案</div>
+                    <a href="javascript:void(0)" class="btn btn_free">免费使用</a>
+                    <div class="wcxhome_banner--star"></div>
+                </div>
+                <div class="wcxhome_new">
+                    <div class="inner clearfixed">
+                        <p class="fl h3" style="font-size: 26px;padding:0;">NEW!</p>
+                        <p class="fl">新版考试系统上线，与微信完美集成，支持招聘培训考试、党建知识竞赛、课后练习考试等场景</p>
+                        <a href="javascript:void(0)" class="btn btn_new fr">立即体验</a>
+                    </div>
+                </div>
+            </div>
+
+
+        <style type="text/css">
+            .scxhome_survey,.scxhome_360,.scxhome_form,.scxhome_vote,.scxhome_evaluation,.scxhome_user{height: 560px;position: relative;padding-bottom: 90px;}
+            .survey{position: absolute;top:90px;left:216px;}
+
+             .content{width: 495px;position: absolute;top:195px;right:215px;}
+
+            .content .h3{font-size: 16px;margin-bottom: 25px;}
+            .content .features li{margin-bottom: 14px;overflow:hidden;}
+            .content .features i{background-image: url(img/tick_gray.png);width: 20px;height: 20px;line-height: inherit;margin-right: 10px;float:left;
+            }
+            .features .features_two{margin-left: 90px;}
+            .features li .transition {background-image: url(img/money_gray.png);
+            }
+            .content .btn{position: absolute;top:245px;left:0;}
+
+            .btn-solid{font-size: 16px;color:#fff;padding:0 23px;line-height: 38px;border: none;border-radius:6px;}
+            .background_gray{background-color: #f5f8fa;}
+            .scxhome_360{height: 560px;position: relative;padding-bottom: 90px;}
+            .scxhome_360 .application_pic{position: absolute;top:90px;right:216px;}
+
+            .scxhome_360 .content{width: 495px;position: absolute;top:195px;left:215px;}
+        </style>
+        <div class="scxhome_survey clearfixed">
+            <div class="fl survey">
+                <a href="javascript:void(0)"><img src="img/survey.png"></a>
+            </div>
+            <div class="fr content">
+                <div class="h3">
+                    <p class="h3">在线问卷调查既复杂又简单，我们将诸多强大的功能集成到系统中，把最好的用户体验交给您。</p>
+                    <div class="features">
+                        <ul class="features_one fl">
+                            <li><i></i><span>轻松导入问卷</span></li>
+                            <li><i></i><span>多渠道分发问卷</span></li>
+                            <li><i></i><span>完美适配移动端</span></li>
+                        </ul>
+                         <ul class="features_two fl">
+                            <li><i></i><span>原始数据下载</span></li>
+                            <li><i></i><span>自动生成图表</span></li>
+                            <li><i class="transition"></i><span>付费收集答卷</span></li>
+                        </ul>
+
+                        <a href="javascript:void(0)" class="btn btn_blue btn-solid" style="top:245px;opacity:1;">问卷调查介绍</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scxhome_360 background_gray clearfixed">
+            <div class="fr application_pic">
+                <a href="javascript:void(0)"><img src="img/360.png"></a>
+            </div>
+            <div class="fl content">
+                <div class="h3">
+                    <p class="h3">360度评估操作简单、功能强大，能全方位、多维度评估员工，挖掘员工发展潜力，帮助企业挑选和培养优秀人才。</p>
+                    <div class="features">
+                        <ul class="features_one fl">
+                            <li><i></i><span>人员名单批量导入</span></li>
+                            <li><i></i><span>维度/权重/部门设置</span></li>
+                            <li><i></i><span>多终端直接作答</span></li>
+                        </ul>
+                         <ul class="features_two fl">
+                            <li><i></i><span>一对多批量评估</span></li>
+                            <li><i></i><span>邮件/短信/密码邀请</span></li>
+                            <li><i></i><span>个人/部门详细报告</span></li>
+                        </ul>
+
+                        <a href="javascript:void(0)" class="btn btn_orange btn-solid" style="top:245px;opacity:1;">360度评估介绍</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scxhome_survey clearfixed">
+            <div class="fl survey">
+                <a href="javascript:void(0)"><img src="img/form.png"></a>
+            </div>
+            <div class="fr content">
+                <div class="h3">
+                    <p class="h3">报名表单功能总是能让您的工作事半功倍。</p>
+                    <div class="features">
+                        <ul class="features_one fl">
+                            <li><i></i><span>活动报名</span></li>
+                            <li><i></i><span>微信签到</span></li>
+                            <li><i></i><span>用户信息表</span></li>
+                        </ul>
+                         <ul class="features_two fl">
+                            <li><i></i><span>信息收集</span></li>
+                            <li><i></i><span>意见反馈表</span></li>
+                            <li><i></i><span>数据标记查询</span></li>
+                        </ul>
+
+                        <a href="javascript:void(0)" class="btn btn_blue btn-solid" style="top:245px;opacity:1;">报名表单介绍</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scxhome_360 background_gray clearfixed">
+            <div class="fr application_pic">
+                <a href="javascript:void(0)"><img src="img/evaluation.png"></a>
+            </div>
+            <div class="fl content">
+                <div class="h3">
+                    <p class="h3">在线测评为您提供了丰富的个性化测评设置空间，专业的功能设置直观展现差异化的测评结果，从而搭建专属您的测评系统。</p>
+                    <div class="features">
+                        <ul class="features_one fl">
+                            <li><i></i><span>多级维度设置</span></li>
+                            <li><i></i><span>自定义测评结果</span></li>
+                        </ul>
+                         <ul class="features_two fl">
+                            <li><i></i><span>标准分差值对比</span></li>
+                            <li><i></i><span>可视化测评数据</span></li>
+                        </ul>
+                        <a href="javascript:void(0)" class="btn btn_orange btn-solid" style="top:245px;opacity:1;">360度评估介绍</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scxhome_vote clearfixed">
+            <div class="fl survey">
+                <a href="javascript:void(0)"><img src="img/vote.png"></a>
+            </div>
+            <div class="fr content">
+                <div class="h3">
+                    <p class="h3">准备好素材，分分钟就可以拥有一个强大的在线投票平台。</p>
+                    <div class="features">
+                        <ul class="features_one fl">
+                            <li><i></i><span>文字投票</span></li>
+                            <li><i></i><span>视频竞选</span></li>
+                        </ul>
+                         <ul class="features_two fl">
+                            <li><i></i><span>图片评选</span></li>
+                            <li><i></i><span>防刷票设置</span></li>
+                        </ul>
+
+                        <a href="javascript:void(0)" class="btn btn_blue btn-solid" style="top:245px;opacity:1;">在线投票介绍</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
